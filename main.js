@@ -50,14 +50,18 @@ if (close) {
     /*Product Image Change*/
 
 
-var mainImg = document.getElementById("MainImg");
-var smallImg = document.getElementsByClassName("small-img");
+document.addEventListener('DOMContentLoaded', function() {
+    var mainImg = document.getElementById("MainImg");
+    var smallImg = document.getElementsByClassName("small-img");
 
-for (let i = 0; i < smallImg.length; i++) {
-    smallImg[i].onclick = function() {
-        mainImg.src = smallImg[i].src;
+    if (mainImg && smallImg.length > 0) {
+        for (let i = 0; i < smallImg.length; i++) {
+            smallImg[i].onclick = function() {
+                mainImg.src = smallImg[i].src;
+            }
+        }
     }
-}
+});
 
 // Cart functionality
 
